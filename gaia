@@ -5,7 +5,7 @@ if [ ! -f ./.htaccess ]; then
 	echo "First using.. Initializing script.."
 	echo "AddDefaultCharset UTF-8" > .htaccess
 	echo "RewriteEngine On" >> .htaccess
-	echo "RewriteCond %{REQUEST_URI}  !^/$" >> .htaccess
+	echo "RewriteCond %{REQUEST_URI}  !^$" >> .htaccess
 fi
 
 ## functions
@@ -18,7 +18,7 @@ if [ "$1" = "add" ]; then
 		cd $2/www
 		./install.sh
 		cd ../../
-		echo -e "RewriteRule\t^$3(.*)\$\t$2/www/\$1\t[L]" >> .htaccess
+		echo -e "RewriteRule\t^$3(.*)\$\t$2/www/\$1\t[QSA,L]" >> .htaccess
 	fi
 else
 	echo "no such command '$1'."
