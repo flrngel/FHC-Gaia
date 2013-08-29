@@ -1,8 +1,9 @@
 FHC-Gaia
 ========
 
-Manage script for using multi FHC-Frameworks
+Easy nodejs script for multi FHC-Framework
 
 # Usage
-- ./gaia add <project_name> <url_name>
+- sudo npm install -g FHC-Gaia
+- gaia new <directory> <url>
 ---
