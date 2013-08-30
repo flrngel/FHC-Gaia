@@ -1,6 +1,6 @@
 {
 	"name": "fhc-gaia",
-	"version": "0.1.0",
+	"version": "0.1.1",
 	"description": "Easy nodejs script for multi FHC-Framework",
 	"author": {
 		"name": "Hwechul Cho",

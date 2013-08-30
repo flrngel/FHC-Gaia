@@ -14,7 +14,7 @@ if(mode == "new"){
 	dir=process.argv[3];
 	url=process.argv[4];
 	url=url.replace(/\/+/,'');
-	newStr="RewriteRule\t^"+url+"(.*)$\t"+dir+"/\t[L,QSA]\n";
+	newStr="RewriteRule\t^"+url+"(.*)$\t"+dir+"/$1\t[L,QSA]\n";
 	if( fs.existsSync(".htaccess") ){
 		flag=false;
 		stacked="";
