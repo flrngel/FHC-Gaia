@@ -46,7 +46,9 @@ if(mode == "new"){
 		htaccess+="AddDefaultCharset UTF-8\n";
 		htaccess+="RewriteEngine On\n";
 		htaccess+="#---------------------------------------------------|\n";
-		htaccess+="RewriteCond %{REQUEST_URI}\t!^$\n";
+		htaccess+="RewriteCond\t%{REQUEST_FILENAME}\t-f";
+		htaccess+="RewriteRule\t.+\t-\t[L]";
+		htaccess+="RewriteCond\t%{REQUEST_URI}\t!^$\n";
 		htaccess+="#---------------------------------------------------|\n";
 		htaccess+="#Gaia Condition Start\n";
 		htaccess+=newStr;
