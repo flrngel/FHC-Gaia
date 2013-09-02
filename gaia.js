@@ -57,7 +57,7 @@ if(mode == "new"){
 	}
 	// download zip
 	var exec=require("child_process").exec;
-	child=exec("wget https://github.com/flrngel/FHC-Framework/archive/master.zip",function(){
+	child=exec("wget https://github.com/flrngel/FHC-Framework/archive/master.zip -O master.zip",function(){
 		child2=exec("unzip master.zip -d tmp",function(){
 			child3=exec("mv tmp/FHC-Framework-master "+dir,function(){
 				child5=exec("cd "+dir+" && ./install.sh && cd "+process.cwd(),function(){
