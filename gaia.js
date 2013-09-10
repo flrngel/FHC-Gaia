@@ -60,9 +60,22 @@ if(mode == "new"){
 	child=exec("wget https://github.com/flrngel/FHC-Framework/archive/master.zip -O master.zip",function(){
 		child2=exec("unzip master.zip -d tmp",function(){
 			child3=exec("mv tmp/FHC-Framework-master "+dir,function(){
-				child5=exec("cd "+dir+" && ./install.sh && cd "+process.cwd(),function(){
-					child4=exec("rm -rf tmp master.zip",function(){
+				child4=exec("cd "+dir+" && ./install.sh && cd "+process.cwd(),function(){
+					child5=exec("rm -rf tmp master.zip",function(){
 						console.log("URL /"+url+" is now running on directory \""+dir+"\"");
+					});
+				});
+			});
+		});
+	});
+}else if( mode == "update" ){
+	var exec=require("child_process").exec;
+	child=exec("wget https://github.com/flrngel/FHC-Framework/archive/master.zip -O master.zip",function(){
+		child2=exec("unzip master.zip -d tmp",function(){
+			child3=exec("./tmp/FHC-Framework-master/install.sh",function(){
+				child4=exec("find ./tmp/FHC-Framework-master -exec mv -i '{}' ./ \;",function(){
+					child5=exec("rm -rf tmp master.zip",function(){
+						console.log("Update Complete!");
 					});
 				});
 			});
