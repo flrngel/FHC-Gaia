@@ -1,24 +1,36 @@
 {
-	"name": "fhc-gaia",
-	"version": "0.2.2",
-	"description": "Easy nodejs script for multi FHC-Framework",
-	"author": {
-		"name": "Hwechul Cho",
-		"email": "flrngel@gmail.com",
-		"url": "http://flx.kr"
-	},
-	"contributors":[],
-	"repositary":{
-		"type": "git",
-		"url": "git://github.com/flrngel/FHC-Gaia.git"
-	},
-	"bugs":{
-		"url": "http://github.com/flrngel/FHC-Gaia/issues"
-	},
-	"bin": {"gaia": "gaia.js"},
-	"licenses": [{
-		"type": "MIT",
-		"url": "http://www.opensource.org/licenses/MIT"
-	}],
-	"keywords": ["Gaia","FHC","FHC-Framework","FHC-Gaia"]
+  "name": "fhc-gaia",
+  "version": "0.3.0",
+  "description": "Easy nodejs script for multi FHC-Framework",
+  "author": {
+    "name": "Hwechul Cho",
+    "email": "flrngel@gmail.com",
+    "url": "http://flx.kr"
+  },
+  "contributors": [],
+  "repositary": {
+    "type": "git",
+    "url": "git://github.com/flrngel/FHC-Gaia.git"
+  },
+  "bugs": {
+    "url": "http://github.com/flrngel/FHC-Gaia/issues"
+  },
+  "bin": {
+    "gaia": "index.js"
+  },
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "http://www.opensource.org/licenses/MIT"
+    }
+  ],
+  "keywords": [
+    "Gaia",
+    "FHC",
+    "FHC-Framework",
+    "FHC-Gaia"
+  ],
+  "dependencies": {
+    "coffee-script": "~1.6.3"
+  }
 }
