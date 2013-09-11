@@ -7,4 +7,4 @@ Easy nodejs script for multi FHC-Framework
 
 - sudo npm install -g fhc-gaia
 - gaia new \<directory\> \<url\>
-- gaia update
+- gaia update \<directory\>
