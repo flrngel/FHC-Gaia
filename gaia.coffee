@@ -52,3 +52,18 @@ if mode == "new"
 					exec "rm -rf tmp master.zip",() ->
 						console.log "URL /"+url+" is now running on directory \""+dir+"\""
 
+
+else if mode == "update"
+
+	if process.argv.length < 4
+		console.log "usage: gaia update <directory>"
+		process.exit 0
+
+	dir=process.argv[3]
+	
+	exec=require("child_process").exec
+	exec "wget https://github.com/flrngel/FHC-Framework/archive/master.zip -O master.zip",() ->
+		exec "unzip master.zip -d tmp",() ->
+			exec "cp -rf tmp/FHC-Framework-master/. "+dir,() ->
+				exec "cd "+dir+" && ./install.sh && cd .. && rm -rf tmp master.zip",() ->
+					console.log dir+" is now updated"
