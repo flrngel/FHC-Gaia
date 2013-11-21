@@ -69,3 +69,10 @@ else if mode == "update"
 			exec "cp -rf tmp/FHC-Framework-master/. "+dir,() ->
 				exec "cd "+dir+" && ./install.sh && cd .. && rm -rf tmp master.zip",() ->
 					console.log dir+" is now updated"
+
+else if mode == "-v"
+
+	pkg=require("./package.json")
+
+	console.log "FHC-Gaia","("+pkg.version+")"
+	console.log pkg.description
